@@ -3,17 +3,17 @@ let orm = require("../config/orm");
 
 const burger = {
   selectAll: function(cb) {
-    orm.selectAll("burger", res => {
+    orm.selectAll("burgers", res => {
       cb(res);
     });
   },
   createAll: function(cols, vals, cb) {
-    orm.createAll("burger", cols, vals, res => {
+    orm.createAll("burgers", cols, vals, res => {
       cb(res);
     });
   },
   update: function(objColVals, condition, cb) {
-    orm.updateAll("burger", objColVals, condition, res => {
+    orm.updateAll("burgers", objColVals, condition, res => {
       cb(res);
     });
   }
