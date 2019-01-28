@@ -3,3 +3,8 @@ body {
   background-color: #9999ff;
   padding: 20px;
 }
+
+img {
+  height: 200px;
+  float: center;
+}
