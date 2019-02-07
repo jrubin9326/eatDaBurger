@@ -15,13 +15,17 @@ router.get("/", function(req, res) {
     res.render("index", hbsObject);
   });
 });
-
+router.get("/api/burgers", function(req, res) {
+  burger.selectAll("burgers", function(data) {
+    res.json(data);
+  });
+});
 router.post("/api/burgers", (req, res) => {
   burgers.createAll(
     ["burger_name", "devoured"],
     [req.body.burger_name, req.body.devoured],
     result => {
-      res.json({ id: result.item_id });
+      res.json({ id: result.insertId });
     }
   );
 });

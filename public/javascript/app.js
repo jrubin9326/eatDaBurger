@@ -5,11 +5,11 @@ $("#newBurger").on("submit", event => {
     burger_name: $("#burger_name")
       .val()
       .trim(),
-    devoured: false
+    devoured: 0
   };
-  console.log("hello");
+  console.log(newBurger);
   // Send the POST request.
-  $.ajax("/api/burger", {
+  $.ajax("/api/burgers", {
     type: "POST",
     data: newBurger
   }).then(() => {

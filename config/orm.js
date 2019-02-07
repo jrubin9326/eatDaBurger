@@ -40,7 +40,7 @@ var orm = {
       cb(result);
     });
   },
-  insertOne: function(table, cols, vals, cb) {
+  createAll: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -61,7 +61,7 @@ var orm = {
     });
   },
 
-  updateOne: function(table, objColVals, condition, cb) {
+  updateAll: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
     queryString += " SET ";
