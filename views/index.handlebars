@@ -6,9 +6,10 @@
         {{#if devoured}}
         {{else}}
         <p>{{item_id}}. {{burger_name}}
-            <span><button class="eatBurger btn btn-secondary" data-id="{{item_id}}">
-                    {{#if devoured}}Eaten{{else}}EAT!{{/if}}
-                </button></span>
+            <button class="eatBurger btn btn-secondary" data-id="{{item_id}}">
+
+                EAT! + {{item_id}}
+            </button>
         </p>
         {{/if}}
         {{/each}}

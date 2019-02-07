@@ -18,15 +18,17 @@ $("#newBurger").on("submit", event => {
   });
 });
 
-// $(".eatBurger").on("click", event => {
-//   event.preventDefault();
-//   let id = $(this).data("item_id");
-//   // Send the PUT request.
-//   $.ajax("/api/burger/" + id, {
-//     type: "PUT",
-//     data: { devoured: true }
-//   }).then(function() {
-//     // Reload the page to get the updated list
-//     location.reload();
-//   });
-// });
+$(".eatBurger").on("click", event => {
+  event.preventDefault();
+  let item_id = $(this).data("item_id");
+  console.log(item_id + "hello");
+  console.log("here");
+  // Send the PUT request.
+  $.ajax("/api/burgers/" + item_id, {
+    type: "PUT",
+    data: { devoured: 1 }
+  }).then(function() {
+    // Reload the page to get the updated list
+    location.reload();
+  });
+});
